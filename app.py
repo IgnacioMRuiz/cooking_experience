@@ -73,16 +73,19 @@ st.subheader("Discover Our Upcoming Culinary Workshops")
 
 st.markdown(
     """
-    **Cooking Studio Experiences** offers a curated series of online cooking workshops designed to bring creativity and flavor into your home kitchen.  
-    Choose your theme, reserve your spot, and cook alongside passionate instructors in real time — all from your own space.
+    At **Cooking Studio Experiences**, we believe that distance should never stop people from sharing a meal together.  
+    These online sessions are more than just cooking classes — they’re small shared moments where two people in different places create the same dish, talk, and laugh as if they were in the same kitchen.  
+    Each experience is designed to make ordinary mornings or nights feel special — a warm ritual, a connection built through flavor, timing, and presence.  
+    Once you reserve your spot, all that’s left is to gather the ingredients, start the call, and let the moment unfold — one recipe, two kitchens, and a shared memory that feels closer than miles apart.
     """
 )
 
 # --- LOCAL IMAGE PATHS ---
-img_pancakes = Path(r"C:\Users\IT\Desktop\cooking_experience\pancakes.jpg")
-img_pasta = Path(r"C:\Users\IT\Desktop\cooking_experience\pasta.jpg")
-img_sushi = Path(r"C:\Users\IT\Desktop\cooking_experience\sushi.jpg")
-img_dessert = Path(r"C:\Users\IT\Desktop\cooking_experience\dessert.jpg")
+base_dir = Path(__file__).parent
+img_pancakes = base_dir / "pancakes.jpg"
+img_pasta = base_dir / "pasta.jpg"
+img_sushi = base_dir / "sushi.jpg"
+img_dessert = base_dir / "dessert.jpg"
 
 # --- ACTIVITIES GRID ---
 col1, col2 = st.columns(2)
@@ -133,4 +136,4 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# py -m streamlit run "Home page.py"
+# py -m streamlit run app.py
